@@ -1,0 +1,32 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-constant-condition": true,
+    "quotemark": [
+      true,
+      "single"
+    ]
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ],
+  "linterOptions": {
+    "exclude": []
+  },
+  "ban": [
+    true,
+    [
+      "describe",
+      "only"
+    ],
+    [
+      "it",
+      "only"
+    ]
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "smsgateway.me",
+  "version": "1.0.0",
+  "description": "SmsGateway.me wrapper.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "console": "node app/console",
+    "cli": "node app/console",
+    "api": "nodemon src/api",
+    "lint": "tslint --project tsconfig.json",
+    "removeDist": "rm -rf dist",
+    "compile": "npm run removeDist && tsc -p tsconfig.json",
+    "test": "jest",
+    "testing": "jest --watch",
+    "check": "npm i && npm run compile && npm run lint && npm run test && npm outdated",
+    "release": "npm run check && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hakier/smsgateway.me.git"
+  },
+  "readmeFilename": "README.md",
+  "keywords": [
+    "sms",
+    "android",
+    "gateway",
+    "sdk",
+    "smsgateway.me"
+  ],
+  "author": "hakier <hakier29a@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/chance": "^1.0.1",
+    "@types/jest": "^23.3.10",
+    "@types/request-promise": "^4.1.42",
+    "chance": "^1.0.18",
+    "jest": "^23.6.0",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.2.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
